@@ -9,11 +9,13 @@
 import UIKit
 import AlamofireImage
 
-class NowPlayingViewController: UIViewController, UITableViewDataSource {
+class NowPlayingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var movies: [[String: Any]] = []
     var refreshControl: UIRefreshControl!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
+
 
     /*
     // MARK: - Navigation
@@ -107,6 +110,17 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     @objc func didPullToRefresh(_ refreshControl:UIRefreshControl){
         fetchMovies()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Start the activity indicator
+        activityIndicator.startAnimating()
+        
+        // Stop the activity indicator
+        // Hides automatically if "Hides When Stopped" is enabled
+        
+        //activityIndicator.stopAnimating()
     }
     
     
