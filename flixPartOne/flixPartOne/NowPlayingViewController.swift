@@ -20,16 +20,18 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        activityIndicator.startAnimating()
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
-        
         
         // table view
         tableView.dataSource = self
         
         fetchMovies()
-
+        
+        activityIndicator.stopAnimating()
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +77,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     func fetchMovies(){
+
         
         // api call
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
@@ -105,22 +108,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         }//task
         
         task.resume()
-
     }
     
     @objc func didPullToRefresh(_ refreshControl:UIRefreshControl){
         fetchMovies()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        // Start the activity indicator
-        activityIndicator.startAnimating()
-        
-        // Stop the activity indicator
-        // Hides automatically if "Hides When Stopped" is enabled
-        
-        //activityIndicator.stopAnimating()
     }
     
     
