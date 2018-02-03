@@ -30,8 +30,6 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         tableView.dataSource = self
         
         fetchMovies()
-        
-        activityIndicator.stopAnimating()
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +101,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
                 self.movies = movies
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+                
+                self.activityIndicator.stopAnimating()
             }//data
             
         }//task
