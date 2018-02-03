@@ -36,6 +36,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 <a href="https://imgflip.com/gif/23v81z"><img src="https://i.imgflip.com/23v81z.gif" title="made at imgflip.com"/></a>
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
