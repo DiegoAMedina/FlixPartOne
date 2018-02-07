@@ -16,6 +16,8 @@
 		547113BC20228065001100D6 /* flixPartOneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547113BB20228065001100D6 /* flixPartOneUITests.swift */; };
 		547113CA2022CCC4001100D6 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547113C92022CCC4001100D6 /* NowPlayingViewController.swift */; };
 		547113CC2022E575001100D6 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547113CB2022E575001100D6 /* MovieCell.swift */; };
+		54863119202BBB1C00D197C4 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54863118202BBB1C00D197C4 /* PosterCell.swift */; };
+		5486311B202BBB6800D197C4 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5486311A202BBB6800D197C4 /* SuperheroViewController.swift */; };
 		54A8BD9C202A9971002821FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8BD9B202A9971002821FF /* DetailViewController.swift */; };
 		C11A14BB7323495DDF81E381 /* Pods_flixPartOneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1EF34E186C67E223E3B94C /* Pods_flixPartOneUITests.framework */; };
 		C70532057BB2613707BE28EF /* Pods_flixPartOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE32BEAFCB7FF8260CA5FF5 /* Pods_flixPartOne.framework */; };
@@ -56,6 +58,8 @@
 		547113BD20228065001100D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		547113C92022CCC4001100D6 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		547113CB2022E575001100D6 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		54863118202BBB1C00D197C4 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		5486311A202BBB6800D197C4 /* SuperheroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
 		54A8BD9B202A9971002821FF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		63E27946EBBFEEC74A37AC4E /* Pods-flixPartOneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixPartOneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-flixPartOneUITests/Pods-flixPartOneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6954C49D65A25742DCFA5F8D /* Pods-flixPartOneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixPartOneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-flixPartOneTests/Pods-flixPartOneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			children = (
 				547113C92022CCC4001100D6 /* NowPlayingViewController.swift */,
 				54A8BD9B202A9971002821FF /* DetailViewController.swift */,
+				5486311A202BBB6800D197C4 /* SuperheroViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				547113CB2022E575001100D6 /* MovieCell.swift */,
+				54863118202BBB1C00D197C4 /* PosterCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -483,6 +489,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				547113CA2022CCC4001100D6 /* NowPlayingViewController.swift in Sources */,
+				54863119202BBB1C00D197C4 /* PosterCell.swift in Sources */,
+				5486311B202BBB6800D197C4 /* SuperheroViewController.swift in Sources */,
 				5471139C20228065001100D6 /* AppDelegate.swift in Sources */,
 				547113CC2022E575001100D6 /* MovieCell.swift in Sources */,
 				54A8BD9C202A9971002821FF /* DetailViewController.swift in Sources */,
