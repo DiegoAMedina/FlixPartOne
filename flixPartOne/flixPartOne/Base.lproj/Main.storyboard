@@ -157,6 +157,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yBH-G9-9B8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zS6-Az-cgK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -187,6 +188,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" id="aq8-59-Pfs">
+                                    <rect key="frame" x="0.0" y="-64" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PosterCell" id="Hdd-bG-pjT" customClass="PosterCell" customModule="flixPartOne" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="307"/>
@@ -203,6 +209,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="posterImageView" destination="poE-YS-IcE" id="BTB-HF-Uoc"/>
+                                            <segue destination="XKW-O6-mVs" kind="show" id="cfh-8B-nff"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -213,12 +220,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="ArW-dJ-P4B"/>
                     <connections>
+                        <outlet property="activityControl" destination="aq8-59-Pfs" id="Kbq-Lj-3YC"/>
                         <outlet property="collectionView" destination="DRm-W1-Ndv" id="1aj-Rk-ubI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5d-D1-LEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-546.37681159420299" y="751.63043478260875"/>
+            <point key="canvasLocation" x="361" y="752"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="ITN-44-oiq">
@@ -244,4 +252,7 @@
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cfh-8B-nff"/>
+    </inferredMetricsTieBreakers>
 </document>

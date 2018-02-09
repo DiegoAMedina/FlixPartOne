@@ -13,10 +13,15 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     var movies: [[String: Any]] = []
     var refreshControl: UIRefreshControl!
+    @IBOutlet weak var activityControl: UIActivityIndicatorView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        activityControl.startAnimating()
+        
         collectionView.dataSource = self
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -27,8 +32,6 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
         let width = collectionView.frame.size.width / cellsPerLine - interItemSpacingTotal / cellsPerLine
         layout.itemSize = CGSize(width: width, height: width * 3 / 2)
         
-        
-
         fetchMovies()
     }
 
@@ -76,9 +79,9 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
                 self.collectionView.reloadData()
                 //self.refreshControl.endRefreshing()
                 
-                sleep(2)
+                sleep(1)
                 
-                //self.activityIndicator.stopAnimating()
+                self.activityControl.stopAnimating()
             }//data
             
         }//task
@@ -106,7 +109,18 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
 
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let cell = sender as! UICollectionViewCell
+        
+        if let indexPath = collectionView.indexPath(for: cell){
+            
+            let movie = movies[indexPath.row]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.movie = movie
+        }
+        
+    }
     
     
     

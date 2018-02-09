@@ -102,7 +102,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
                 
-                sleep(2)
+                sleep(1)
                 
                 self.activityIndicator.stopAnimating()
             }//data
